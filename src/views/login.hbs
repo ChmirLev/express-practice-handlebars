@@ -1,0 +1,24 @@
+<main class="login">
+  <h1>Вход</h1>
+
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{/if}}
+
+
+  <div class="auth-card">
+    <form method="POST" action="/login">
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Пароль
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="submit">Войти</button>
+      </form>
+  </div>
+</main>

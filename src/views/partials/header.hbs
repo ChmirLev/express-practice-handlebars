@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="logo">Express App</a>
+
+    <nav class="nav">
+      {{#if user}}
+        <span>{{user.username}}</span>
+        <form method="POST" action="/logout">
+          <button type="submit">Выйти</button>
+        </form>
+      {{else}}
+        <a href="/login">Вход</a>
+        <a href="/registration">Регистрация</a>
+      {{/if}}
+    </nav>
+  </div>
+</header>
